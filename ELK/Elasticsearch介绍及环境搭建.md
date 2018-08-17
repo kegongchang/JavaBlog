@@ -16,7 +16,7 @@ Elasticsearch也使用Java开发并使用Lucene作为其核心来实现所有索
 安装过程选用CentOS7做为操作系统，选用的Elasticsearch版本为 6.2.4,具体安装步骤如下。
 
 1. 访问Elasticsearch官网下载Elasticsearch安装文件。如图-1、图-2所示，下载的文件如图-3所示。
-![1-选择Elasticsearch版本](images/ELK/1.png)
+![1-选择Elasticsearch版本](../images/ELK/1.png)
 ![2-下载Elasticsearch tar包](images/ELK/2.png)
 ![3-下载的Elasticsearch 包](images/ELK/3.png)
 
