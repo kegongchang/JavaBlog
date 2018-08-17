@@ -17,17 +17,17 @@ Elasticsearch也使用Java开发并使用Lucene作为其核心来实现所有索
 
 1. 访问Elasticsearch官网下载Elasticsearch安装文件。如图-1、图-2所示，下载的文件如图-3所示。
 ![1-选择Elasticsearch版本](../images/ELK/1.png)
-![2-下载Elasticsearch tar包](images/ELK/2.png)
-![3-下载的Elasticsearch 包](images/ELK/3.png)
+![2-下载Elasticsearch tar包](../images/ELK/2.png)
+![3-下载的Elasticsearch 包](../images/ELK/3.png)
 
 2. 下载elasticsearch对应的IK分词器：访问elasticsearch-analysis-i1. 1. k软件GitHub托管地址https://github.com/medcl/elasticsearch-analysis-ik 如图-4、图-5所示。点击“Download ZIP”下载elasticsearch-analysis-ik压缩包。
-![4-主页](images/ELK/4.png)
-![5-选择对应版本](images/ELK/5.png)
-![6-开始下载](images/ELK/6.png)
-![7-下载的文件](images/ELK/7.png)
+![4-主页](../images/ELK/4.png)
+![5-选择对应版本](../images/ELK/5.png)
+![6-开始下载](../images/ELK/6.png)
+![7-下载的文件](../images/ELK/7.png)
 
 3. 上传elasticsearch及elasticsearch-analysis-ik软件包到Linux服务器.
-![8-上传文件](images/ELK/8.png)
+![8-上传文件](../images/ELK/8.png)
 4. 使用以下命令<a name="_Hlk518379760">将elasticsearch-6.2.4</a>.tar.gz解压至/usr/local/目录.
 ```shell
 tar -zxvf elasticsearch-6.2.4.tar.gz
@@ -40,7 +40,7 @@ mv elasticsearch-6.2.4 elasticsearch
 ```shell
 cd /elasticsearch/config/
 ```
-![9-切换目录](images/ELK/9.png)
+![9-切换目录](../images/ELK/9.png)
 
 1. 修改elasticsearch.yml文件为以下内容。
 ```shell
@@ -52,17 +52,17 @@ http.port: 9200
 network.host: 0.0.0.0
 ```
 1. 解压elasticsearch-analysis-ik-6.2.4.zip到“/usr/local/ik”目录，如图11所示。
-![11-解压 n>](images/ELK/11.png)
+![11-解压 n>](../images/ELK/11.png)
 
 1. 在“/usr/local/elasticsearch/plugins”目录下创建“analysis-ik”目录，如图-12.
-![12-创建ik插件目录](images/ELK/12.png)
+![12-创建ik插件目录](../images/ELK/12.png)
 
 1. 使用以下命令将解压后的“ik”插件包的文件拷贝至“/usr/local/elasticsearch/plugins/analysis-ik”目录
 ```shell
 cp -r /usr/local/ik/elasticsearch/*  /usr/local/elasticsearch/plugins/analysis-ik/
 ```
 拷贝后的“analysis-ik”目录下的文件如图-13所示.
-![13-analysis-ik](images/ELK/13.png)
+![13-analysis-ik](../images/ELK/13.png)
 
 1. elasticsearch不能使用root用户进行启动，因此需要创建对应管理elasticsearch的用户。使用以下命令创建elsearch用户组，并在“elsearch”组下创建名为“elsearch”用户，设置密码为“elasticsearch”。
 ```shell
@@ -70,19 +70,19 @@ groupadd elsearch
 useradd elsearch -g elsearch -p elasticsearch
 ```
 1. 为“elsearch”用户创建elasticsearch目录的读写及执行权限，如图-14所示
-![14-添加权限](images/ELK/14.png)
+![14-添加权限](../images/ELK/14.png)
 
 1. 切换至elsearch用户，并启动elasticsearch，启动命令如图-15所示
 ```shell
 elasticsearch/bin/elasticsearch -d
 ```
-![15-启动elasticsearch](images/ELK/15.png)
+![15-启动elasticsearch](../images/ELK/15.png)
 
 1. 按照以下路径访问elasticsearch，访问界面如图-16所示。如能出现图16所示则表示elasticsearch安装成功。
 ```shell
 http://ip地址:9200/
 ```
-![16-elasticsearch启动页面](images/ELK/16.png)
+![16-elasticsearch启动页面](../images/ELK/16.png)
 
 
 
